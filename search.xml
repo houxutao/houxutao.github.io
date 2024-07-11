@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>有关我在路边捡到PCB的逆向探索</title>
+      <link href="/2024/07/11/%E6%9C%89%E5%85%B3%E6%88%91%E5%9C%A8%E8%B7%AF%E8%BE%B9%E6%8D%A1%E5%88%B0PCB%E7%9A%84%E9%80%86%E5%90%91%E6%8E%A2%E7%B4%A2/"/>
+      <url>/2024/07/11/%E6%9C%89%E5%85%B3%E6%88%91%E5%9C%A8%E8%B7%AF%E8%BE%B9%E6%8D%A1%E5%88%B0PCB%E7%9A%84%E9%80%86%E5%90%91%E6%8E%A2%E7%B4%A2/</url>
+      
+        <content type="html"><![CDATA[<h1 id="事件起因"><a href="#事件起因" class="headerlink" title="事件起因"></a>事件起因</h1><p>2024年7月10号在学校考完试后去学校外的路边理发阿姨那理发途中在路边就发现了这个东西</p><h2 id="充电宝介绍"><a href="#充电宝介绍" class="headerlink" title="充电宝介绍"></a>充电宝介绍</h2><p><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/8-%E8%AF%A5%E5%85%85%E7%94%B5%E5%AE%9D%E7%9A%84%E5%9E%8B%E5%8F%B7%E5%8F%82%E6%95%B0.jpg" alt="充电宝的型号参数"><br>最大支持22.5w<br><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/9-%E8%AF%A5%E5%85%85%E7%94%B5%E5%AE%9D%E7%9A%84%E6%8E%A5%E5%8F%A3%E9%9D%A2%E6%9D%BF.jpg" alt="充电宝的接口数量"><br>有Lightning接口，Micro-USB接口输入及typc接口输入输出通用，两个A口输出<br><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/1-%E5%A4%96%E5%A3%B3%E8%83%8C%E9%9D%A2.jpg" alt="外壳在路边的样子"><br>正面的外壳已经裂开了，背面的外壳还可以。<br><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/2-%E5%A4%96%E5%A3%B3%E6%AD%A3%E9%9D%A2.jpg" alt="PCB在路边的样子"><br>PCB从样子看应该是没有问题的，成色还行有点小沙子。<br><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/3-%E7%94%B5%E8%8A%AF%E5%A4%A7%E8%87%B4.jpg" alt="电芯在路边的样子"><br><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/4-%E7%94%B5%E8%8A%AF%E6%AD%A3%E9%9D%A2.jpg" alt="电芯型号"><br>从电芯来看，这充电宝应该是路过的人不小心从小电鸡上掉下来的。那天全天无下雨，从上面的小水珠上应该是在7月9日之前所弃。<br>电芯不耐摔于是考虑到安全问题就只拿走外壳和在上面的PCB，因此才有了这期推文。</p><h1 id="PCB逆向探索"><a href="#PCB逆向探索" class="headerlink" title="PCB逆向探索"></a>PCB逆向探索</h1><p>回到宿舍看了看PCB整体的做工还是不错的</p><h2 id="PCB正面"><a href="#PCB正面" class="headerlink" title="PCB正面"></a>PCB正面</h2><p><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/6-%E7%94%B5%E8%B7%AF%E6%9D%BF%E6%AD%A3%E9%9D%A2.jpg" alt="PCB正面细节"><br>方案是珠海智融科技的<strong>sw6103s</strong>与8位MCU为东软的<strong>HR7P169BFGSD</strong><br><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/12-%E5%BF%AB%E5%85%85%E7%AE%A1%E7%90%86%E8%8A%AF%E7%89%87.jpg" alt="sw6103s"><br>但智融的SW6103s在官网查不到，通过产品的详情看是支持22.5W的功率且sw6103s封装为QFN6*6-40P<br>判断为sw6106是的sw6103S的改版<br><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/11-8%E4%BD%8DMCU.png" alt="HR7P169BFGSD"></p><p><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/10-%E5%8F%AF%E8%83%BD%E7%9A%84%E4%BA%A7%E7%BA%BF.png" alt="相关的封装芯片"></p><p>8205A的双N沟道20v 6A</p><h2 id="PCB背面"><a href="#PCB背面" class="headerlink" title="PCB背面"></a>PCB背面</h2><p><img src="/./%E7%BD%97%E9%A9%AC%E4%BB%95%E5%85%85%E7%94%B5%E5%AE%9D%E7%AF%87/7-%E7%94%B5%E8%B7%AF%E6%9D%BF%E8%83%8C%E9%9D%A2.jpg" alt="PCB背面细节"></p><p>锯齿状焊盘(放电齿)来应对esd，防雷击、静电，同时放电齿两端的地用电容耦合。</p><p>开窗加锡大铺铜来增加sw6103s和MCU的散热能力</p><p>DW01A的SOT-23-6L封装电池管理芯片，用于电池充放电、监测、保护。</p><p>NTC对电芯温度检测数据传到MCU，MCU对sw6103s进行自适应调节，来避免意外的发生。</p><hr><p>结语：这块PCB还是不错的，也激起了我对esd的学习兴趣，这类MCU+功能芯片的结合是十分可以的，我那种单纯的sw3526的快充模块可以改进一下加个8位单片机对电流检测，芯片的温度检测，控制散热风扇的转数，加个PID调节，那我的小制作身价将会大大翻倍。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 知识分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>有关暑假的安排</title>
       <link href="/2024/07/09/%E6%9C%89%E5%85%B3%E6%9A%91%E5%81%87%E7%9A%84%E5%AE%89%E6%8E%92/"/>
       <url>/2024/07/09/%E6%9C%89%E5%85%B3%E6%9A%91%E5%81%87%E7%9A%84%E5%AE%89%E6%8E%92/</url>
