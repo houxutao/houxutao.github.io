@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>CW社区CC表简评</title>
+      <link href="/2024/11/21/CW%E7%A4%BE%E5%8C%BACC%E8%A1%A8/"/>
+      <url>/2024/11/21/CW%E7%A4%BE%E5%8C%BACC%E8%A1%A8/</url>
+      
+        <content type="html"><![CDATA[<h3 id="cw32CC表简介"><a href="#cw32CC表简介" class="headerlink" title="cw32CC表简介"></a>cw32CC表简介</h3><p>一款以CW32的主控的Type-C接口电压电流功率表，实现可实时监测接口的电压电流情况<img src="/./cc%E8%A1%A8%E5%A4%96%E8%A7%82.jpg" alt="cc表外观"></p><h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>基于一块CW32L010F8U6为主控，四路ADC（ADC10~13），分别为电压检测(ADC13)，温度检测(ADC10)，以及电流检测（高端电流采样芯片INA199A1DCKR，差分放大电路，带有偏置电压。可采集双向的电流。）<a href="https://blog.csdn.net/qq_27158179/article/details/82585609">一款用于采集双向电流的差分放大电路_双向电流检测电路-CSDN博客</a><img src="/./cw32%E4%B8%BB%E6%8E%A7.png" alt="cw32主控"><br>    电源使用压差为600mv的ldo（SE8533K2-HF)<img src="/./ldo%E7%94%B5%E6%BA%90.png" alt="ldo电源"></p><table><thead><tr><th>最大输入电压</th><th>40V</th></tr></thead><tbody><tr><td>输出电压</td><td>3.3V</td></tr><tr><td>输出电流</td><td>250mA</td></tr><tr><td>工作温度</td><td>-20℃～85℃</td></tr></tbody></table><p>设计者在设计时考虑到用户可能使用大电压的电源，导致ldo效率太低（如使用20v时，效率为3.3/20v=16.5%），发热严重的思路来设计PCB板，让ldo的热量传导到pcb板来散热，同时接口处未作特殊处理，这样的话带来一个问题多的热量传导到typec接口上，接入typec接口的设备，如有保护功能的将会降功率到一个合适的功率而无法发挥设备的功率极限。实验得使用redmelk50U的120W充电器始终无法达到100w的功率，何谈120W，同时由板载ntc测得pcb温度可达56度以上，温度可能还是比较高的，但还未到工作温度极限。还是一个不错的产品，15元的价格也是还可以的，</p><p>显示方面有spi协议0.91寸LCD屏幕或自带数码管可选，可实现，电压、电流、功率、充电时间、温度，电压电流温度曲线的显示。<img src="/./%E6%98%BE%E7%A4%BA.png" alt="显示"></p><p>​PCB设计方面</p><ol><li>采样电阻使用<strong>开尔文走线layout</strong><br> <img src="/./%E5%BC%80%E5%B0%94%E6%96%87%E8%B5%B0%E7%BA%BF.png" alt="开尔文走线"></li><li>对电源，重要信号点添加测试点如：ADC,CC</li></ol><h3 id="用户方面"><a href="#用户方面" class="headerlink" title="用户方面"></a>用户方面</h3><p>​cc表到手后要自己烧录，但烧录方面官方还是要多做内容，讲的不清不楚，还是要尔等再细细探索，cw32可用usb转串口下载和DAP-link来下载。</p><h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>产品还是不错的，当手边没更好的器材时，可做简单测量，测低功耗就别用了，精度方面还是一言难尽的，或许只能简单的测一测手机的充电功耗罢了。</p><p><img src="/./%E6%8E%A5%E5%85%A5%E5%AE%9E%E5%86%B51.jpg" alt="接入实况1"></p><p><img src="/./%E6%8E%A5%E5%85%A5%E5%AE%9E%E5%86%B52.jpg" alt="接入实况"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 知识分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>DC-DC降压BUCK电路简述</title>
       <link href="/2024/11/17/%E7%94%B5%E6%BA%90%E4%B8%93%E9%A2%98/DC-DC%E9%99%8D%E5%8E%8BBUCK%E7%94%B5%E8%B7%AF/"/>
       <url>/2024/11/17/%E7%94%B5%E6%BA%90%E4%B8%93%E9%A2%98/DC-DC%E9%99%8D%E5%8E%8BBUCK%E7%94%B5%E8%B7%AF/</url>
