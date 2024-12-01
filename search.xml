@@ -4,11 +4,49 @@
   
     
     <entry>
+      <title>有关来自我的朋友“雷大仙”学习型游戏的想法</title>
+      <link href="/2024/12/01/%E5%AD%A6%E4%B9%A0%E5%9E%8B%E6%B8%B8%E6%88%8F%E6%83%B3%E6%B3%95/"/>
+      <url>/2024/12/01/%E5%AD%A6%E4%B9%A0%E5%9E%8B%E6%B8%B8%E6%88%8F%E6%83%B3%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[<h3 id="有关来自我的朋友“雷大仙”学习型游戏的想法"><a href="#有关来自我的朋友“雷大仙”学习型游戏的想法" class="headerlink" title="有关来自我的朋友“雷大仙”学习型游戏的想法"></a>有关来自我的朋友“雷大仙”学习型游戏的想法</h3><p>一个辅助学习的游戏理念，即利用游戏的奖励机制，就像大学学习中的“回答问题加学分”一样。</p><h4 id="玩法"><a href="#玩法" class="headerlink" title="玩法"></a>玩法</h4><p>如宝可梦一样的精灵对战养成游戏，玩家养成宝可梦，打怪。</p><h4 id="获取资源"><a href="#获取资源" class="headerlink" title="获取资源"></a>获取资源</h4><p>在“学习”中获得多资源，如背单词，看科普视频，练口语等等。在打怪中获得小资源。</p><p>在课堂学习中，积极回答问题老师发小纸条激活码，可获取大量资源。</p><h5 id="打大怪的奖励"><a href="#打大怪的奖励" class="headerlink" title="打大怪的奖励"></a>打大怪的奖励</h5><p>没想好</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 生活琐碎 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows的esp-idf学习</title>
+      <link href="/2024/11/27/Windows%E7%9A%84esp-idf%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+      <url>/2024/11/27/Windows%E7%9A%84esp-idf%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="有关Windows的ESP-idf学习"><a href="#有关Windows的ESP-idf学习" class="headerlink" title="有关Windows的ESP-idf学习"></a>有关Windows的ESP-idf学习</h1><p>在学习中发现ESP-IDF与arduino IDE相比，ESP-idf代码的效率更高，能编程式的设置功能更多，兼容性更好，相对的开发环境搭建更为复杂，开发门槛更高。</p><p>在后来我发现我的学习能力并非是那么强，在环境配置上哪里有问题，以及与每次要运行时，只能打开esp-idf 的命令行工具，让他每次都加载环境变量，然后cd 项目的路径来编译、烧录flash、打开监视器。当然环境变量配置不好，就没法太好的使用vscode的插件了，cmd打不开。不过vscode到底是个编辑器，与espidf的cmd工具。<br>（此cmd与windows cmd 为同一个，但多了自动加环境变量）</p><p>当然可能我的电脑在之前的sw2023（一个要通过注册表、</p><p>环境变量破解的3D建模软件）安装中出现问题。可能如此我也不太肯定。</p><p>esp-idf安装，下载</p><ol><li><p>到 esp-idf官网下载离线的下载工具，下载安装即可，路径尽量短，没空格、中文就行。</p></li><li><p>打开ESP-IDF 版本号 CMD ，cd demo项目文件路径 就可，esp-idf的example在安装路径\frameworks\版本号\example。</p></li><li><p>编译（构建）<code>idf.py build</code><br> 烧录<code>idf.py -p PORT  flash</code><br> 打开监视器 <code>idf.py -p PORT monitor</code><br> 查询内存剩余<code>idf.py size</code><br> 更多在<code>idf.py --help</code></p></li></ol>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 知识分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>CW社区CC表简评</title>
       <link href="/2024/11/21/CW%E7%A4%BE%E5%8C%BACC%E8%A1%A8/"/>
       <url>/2024/11/21/CW%E7%A4%BE%E5%8C%BACC%E8%A1%A8/</url>
       
-        <content type="html"><![CDATA[<h3 id="cw32CC表简介"><a href="#cw32CC表简介" class="headerlink" title="cw32CC表简介"></a>cw32CC表简介</h3><p>一款以CW32的主控的Type-C接口电压电流功率表，实现可实时监测接口的电压电流情况<img src="/./cc%E8%A1%A8%E5%A4%96%E8%A7%82.jpg" alt="cc表外观"></p><h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>基于一块CW32L010F8U6为主控，四路ADC（ADC10~13），分别为电压检测(ADC13)，温度检测(ADC10)，以及电流检测（高端电流采样芯片INA199A1DCKR，差分放大电路，带有偏置电压。可采集双向的电流。）<a href="https://blog.csdn.net/qq_27158179/article/details/82585609">一款用于采集双向电流的差分放大电路_双向电流检测电路-CSDN博客</a><img src="/./cw32%E4%B8%BB%E6%8E%A7.png" alt="cw32主控"><br>    电源使用压差为600mv的ldo（SE8533K2-HF)<img src="/./ldo%E7%94%B5%E6%BA%90.png" alt="ldo电源"></p><table><thead><tr><th>最大输入电压</th><th>40V</th></tr></thead><tbody><tr><td>输出电压</td><td>3.3V</td></tr><tr><td>输出电流</td><td>250mA</td></tr><tr><td>工作温度</td><td>-20℃～85℃</td></tr></tbody></table><p>设计者在设计时考虑到用户可能使用大电压的电源，导致ldo效率太低（如使用20v时，效率为3.3/20v=16.5%），发热严重的思路来设计PCB板，让ldo的热量传导到pcb板来散热，同时接口处未作特殊处理，这样的话带来一个问题多的热量传导到typec接口上，接入typec接口的设备，如有保护功能的将会降功率到一个合适的功率而无法发挥设备的功率极限。实验得使用redmelk50U的120W充电器始终无法达到100w的功率，何谈120W，同时由板载ntc测得pcb温度可达56度以上，温度可能还是比较高的，但还未到工作温度极限。还是一个不错的产品，15元的价格也是还可以的，</p><p>显示方面有spi协议0.91寸LCD屏幕或自带数码管可选，可实现，电压、电流、功率、充电时间、温度，电压电流温度曲线的显示。<img src="/./%E6%98%BE%E7%A4%BA.png" alt="显示"></p><p>​PCB设计方面</p><ol><li>采样电阻使用<strong>开尔文走线layout</strong><br> <img src="/./%E5%BC%80%E5%B0%94%E6%96%87%E8%B5%B0%E7%BA%BF.png" alt="开尔文走线"></li><li>对电源，重要信号点添加测试点如：ADC,CC</li></ol><h3 id="用户方面"><a href="#用户方面" class="headerlink" title="用户方面"></a>用户方面</h3><p>​cc表到手后要自己烧录，但烧录方面官方还是要多做内容，讲的不清不楚，还是要尔等再细细探索，cw32可用usb转串口下载和DAP-link来下载。</p><h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>产品还是不错的，当手边没更好的器材时，可做简单测量，测低功耗就别用了，精度方面还是一言难尽的，或许只能简单的测一测手机的充电功耗罢了。</p><p><img src="/./%E6%8E%A5%E5%85%A5%E5%AE%9E%E5%86%B51.jpg" alt="接入实况1"></p><p><img src="/./%E6%8E%A5%E5%85%A5%E5%AE%9E%E5%86%B52.jpg" alt="接入实况"></p>]]></content>
+        <content type="html"><![CDATA[<p>aa’a</p><h3 id="cw32CC表简介"><a href="#cw32CC表简介" class="headerlink" title="cw32CC表简介"></a>cw32CC表简介</h3><p>一款以CW32的主控的Type-C接口电压电流功率表，实现可实时监测接口的电压电流情况<img src="/./cc%E8%A1%A8%E5%A4%96%E8%A7%82.jpg" alt="cc表外观"></p><h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>基于一块CW32L010F8U6为主控，四路ADC（ADC10~13），分别为电压检测(ADC13)，温度检测(ADC10)，以及电流检测（高端电流采样芯片INA199A1DCKR，差分放大电路，带有偏置电压。可采集双向的电流。）<a href="https://blog.csdn.net/qq_27158179/article/details/82585609">一款用于采集双向电流的差分放大电路_双向电流检测电路-CSDN博客</a><img src="/./cw32%E4%B8%BB%E6%8E%A7.png" alt="cw32主控"><br>    电源使用压差为600mv的ldo（SE8533K2-HF)<img src="/./ldo%E7%94%B5%E6%BA%90.png" alt="ldo电源"></p><table><thead><tr><th>最大输入电压</th><th>40V</th></tr></thead><tbody><tr><td>输出电压</td><td>3.3V</td></tr><tr><td>输出电流</td><td>250mA</td></tr><tr><td>工作温度</td><td>-20℃～85℃</td></tr></tbody></table><p>设计者在设计时考虑到用户可能使用大电压的电源，导致ldo效率太低（如使用20v时，效率为3.3/20v=16.5%），发热严重的思路来设计PCB板，让ldo的热量传导到pcb板来散热，同时接口处未作特殊处理，这样的话带来一个问题多的热量传导到typec接口上，接入typec接口的设备，如有保护功能的将会降功率到一个合适的功率而无法发挥设备的功率极限。实验得使用redmelk50U的120W充电器始终无法达到100w的功率，何谈120W，同时由板载ntc测得pcb温度可达56度以上，温度可能还是比较高的，但还未到工作温度极限。还是一个不错的产品，15元的价格也是还可以的，</p><p>显示方面有spi协议0.91寸LCD屏幕或自带数码管可选，可实现，电压、电流、功率、充电时间、温度，电压电流温度曲线的显示。<img src="/./%E6%98%BE%E7%A4%BA.png" alt="显示"></p><p>​PCB设计方面</p><ol><li>采样电阻使用<strong>开尔文走线layout</strong><br> <img src="/./%E5%BC%80%E5%B0%94%E6%96%87%E8%B5%B0%E7%BA%BF.png" alt="开尔文走线"></li><li>对电源，重要信号点添加测试点如：ADC,CC</li></ol><h3 id="用户方面"><a href="#用户方面" class="headerlink" title="用户方面"></a>用户方面</h3><p>​cc表到手后要自己烧录，但烧录方面官方还是要多做内容，讲的不清不楚，还是要尔等再细细探索，cw32可用usb转串口下载和DAP-link来下载。</p><h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>产品还是不错的，当手边没更好的器材时，可做简单测量，测低功耗就别用了，精度方面还是一言难尽的，或许只能简单的测一测手机的充电功耗罢了。</p><p><img src="/./%E6%8E%A5%E5%85%A5%E5%AE%9E%E5%86%B51.jpg" alt="接入实况1"></p><p><img src="/./%E6%8E%A5%E5%85%A5%E5%AE%9E%E5%86%B52.jpg" alt="接入实况"></p>]]></content>
       
       
       
