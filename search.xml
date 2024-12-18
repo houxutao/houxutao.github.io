@@ -23,11 +23,11 @@
     
     
     <entry>
-      <title>自己对nas的需求</title>
+      <title>有关nas的需求</title>
       <link href="/2024/12/11/%E6%99%AE%E9%80%9A%E4%BA%BA%E5%AF%B9nas%E7%9A%84%E9%9C%80%E6%B1%82/"/>
       <url>/2024/12/11/%E6%99%AE%E9%80%9A%E4%BA%BA%E5%AF%B9nas%E7%9A%84%E9%9C%80%E6%B1%82/</url>
       
-        <content type="html"><![CDATA[<h3 id="自己对nas的需求"><a href="#自己对nas的需求" class="headerlink" title="自己对nas的需求"></a>自己对nas的需求</h3><h4 id="nas的简介"><a href="#nas的简介" class="headerlink" title="nas的简介"></a>nas的简介</h4><p>NAS（Network Attached Storage：网络附属存储）按字面简单说就是连接在网络上，具备资料存储功能的装置，因此也称为“<a href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8%E5%99%A8/9485387?fromModule=lemma_inlink">网络存储器</a>”。它是一种专用数据<a href="https://baike.baidu.com/item/%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/1625801?fromModule=lemma_inlink">存储服务器</a>。可以理解成一台联网的硬盘，可供用户上传下载即备份图片下载影片等一些基本用法，当然如果搭建nas的芯片足够“强大”就可以运行dockers（x86架构可以，arm架构要进行转码），总所周知当设备可以运行dockers那么他的可玩性就大大增加了（这里就不展开了，它还是有一定门槛的）。在我看来我想一般人也没有使用像dockers的这样的功能。一般为nas的基本功能图片、影片、办公文档等…</p>]]></content>
+        <content type="html"><![CDATA[<h3 id="nas的简介"><a href="#nas的简介" class="headerlink" title="nas的简介"></a>nas的简介</h3><p>NAS（Network Attached Storage：网络附属存储）按字面简单说就是连接在网络上，具备资料存储功能的装置，因此也称为“<a href="https://baike.baidu.com/item/%E7%BD%91%E7%BB%9C%E5%AD%98%E5%82%A8%E5%99%A8/9485387?fromModule=lemma_inlink">网络存储器</a>”。它是一种专用数据<a href="https://baike.baidu.com/item/%E5%AD%98%E5%82%A8%E6%9C%8D%E5%8A%A1%E5%99%A8/1625801?fromModule=lemma_inlink">存储服务器</a>。可以理解成一台联网的硬盘，可供用户上传下载即备份图片下载影片等一些基本用法，当然如果搭建nas的芯片足够“强大”就可以运行dockers（x86架构可以，arm架构要进行转码），总所周知当设备可以运行dockers那么他的可玩性就大大增加了（这里就不展开了，它还是有一定门槛的）。在我看来我想一般人也没有使用像dockers的这样的功能。一般为nas的基本功能图片、影片、办公文档等…</p><h4 id="对nas的需求"><a href="#对nas的需求" class="headerlink" title="对nas的需求"></a>对nas的需求</h4><p>我想在一般用户的需求有</p><ol><li>图片的备份（如果可以在手机、ipad等设备的相册中，自动局域网备份就可，或者下载指定APP实现该功能也可）</li><li>家庭影视方案（在下载影视作品，可以自动找影视的信息，名称、主演、豆瓣评分，同时具备局域网传输或者连接HDMI到电视直接播放的解码能力也可。）</li><li>除了图片和影视之外的文档的备份（链接办公软件，代码备份，当然可以用git）</li><li>离线下载（即利用家庭网络下载，并非操作端下载，而是给nas下达下载指令下载），包括但不限于迅雷、qb、百度等各类网盘，<br> 在这里推荐qbee这一下载利器<a href="https://github.com/c0re100/qBittorrent-Enhanced-Edition/releases">Releases · c0re100/qBittorrent-Enhanced-Edition · GitHub</a><br> 下载安装的教程可看<a href="https://www.52pojie.cn/thread-1056800-1-1.html">【BT下载】qBittorrent Enhanced Edition (增强版) v4.1.9.4 已支持订阅 Tracker URL! - 吾爱破解 - 52pojie.cn</a></li><li>对于docker相关硬件也应要有相关配置，以便用户折腾。（仅对于个人用户）</li></ol><h4 id="展望"><a href="#展望" class="headerlink" title="展望"></a>展望</h4><p>我想拥有一台如此的nas电脑固然不赖，但考虑我的资金。我想使用U盘，硬盘及使用老电脑也可试试，万不可瞒目购买。</p><p>当然在当今内卷时代，我想好用的产品固然有，但也不便宜，如：绿联，极空间的产品等这一些开始做nas的品牌，可惜没钱买(￣▽￣)”，那些好像要他们的服务器辅助的，有点怕如果凉了，好吧就讲到这了，但我相信也不可能那么悲剧的</p><p>这让想起极越（极越汽车在国产新势力中的整体品质口碑和外观，都属于中上等水平的）。</p>]]></content>
       
       
       
@@ -46,7 +46,7 @@
       <link href="/2024/12/04/%E6%83%A9%E5%89%8D%E6%AF%96%E5%90%8E%EF%BC%8C%E6%B2%BB%E7%97%85%E6%95%91%E4%BA%BA/"/>
       <url>/2024/12/04/%E6%83%A9%E5%89%8D%E6%AF%96%E5%90%8E%EF%BC%8C%E6%B2%BB%E7%97%85%E6%95%91%E4%BA%BA/</url>
       
-        <content type="html"><![CDATA[<h1 id="惩前毖后，治病救人"><a href="#惩前毖后，治病救人" class="headerlink" title="惩前毖后，治病救人"></a>惩前毖后，治病救人</h1><p>1942年延安整风运动中的<strong>宗旨</strong>。旨对待犯==错误同志==的正确方针</p><p>“惩前毖后”，就是对以前的错误一定要揭发，不讲情面；要以科学的态度分析批判过去的坏东西，以便使后来的工作慎重些，做得好些。</p><p>“治病救人”，就是揭发错误、批判缺点的目的，好像医生治病一样，完全是为了救人，而不是为了把人整死。实行这一方针，才能达到既弄清思想，又团结同志的目的。</p><h3 id="实行方法"><a href="#实行方法" class="headerlink" title="实行方法"></a>实行方法</h3><p>毛主席反复强调指出：“要相信百分之九十以上的干部是好的和比较好的。犯了错误的人，大多数是可以改的”，“打击面要小，教育面要宽”。</p><p>本文来源 百度百科</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="惩前毖后，治病救人"><a href="#惩前毖后，治病救人" class="headerlink" title="惩前毖后，治病救人"></a>惩前毖后，治病救人</h1><p>1942年延安整风运动中的<strong>宗旨</strong>。旨对待犯==错误同志==的正确方针</p><p>“惩前毖后”，就是对以前的错误一定要揭发，不讲情面；要以科学的态度分析批判过去的坏东西，以便使后来的工作慎重些，做得好些。</p><p>“治病救人”，就是揭发错误、批判缺点的目的，好像医生治病一样，完全是为了救人，而不是为了把人整死。实行这一方针，才能达到既弄清思想，又团结同志的目的。</p><h3 id="实行方法"><a href="#实行方法" class="headerlink" title="实行方法"></a>实行方法</h3><p>毛主席反复强调指出：“要相信百分之九十以上的干部是好的和比较好的。犯了错误的人，大多数是可以改的”，“打击面要小，教育面要宽”。</p><p>本文采自 百度百科</p>]]></content>
       
       
       
