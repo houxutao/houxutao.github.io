@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>不同使用场景使用电容类型有何差异</title>
+      <link href="/2025/05/12/%E4%B8%8D%E5%90%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8%E7%94%B5%E5%AE%B9%E7%B1%BB%E5%9E%8B%E6%9C%89%E4%BD%95%E5%B7%AE%E5%BC%82/"/>
+      <url>/2025/05/12/%E4%B8%8D%E5%90%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8%E7%94%B5%E5%AE%B9%E7%B1%BB%E5%9E%8B%E6%9C%89%E4%BD%95%E5%B7%AE%E5%BC%82/</url>
+      
+        <content type="html"><![CDATA[<h1 id="不同领域使用电容类型有何差异"><a href="#不同领域使用电容类型有何差异" class="headerlink" title="不同领域使用电容类型有何差异"></a>不同领域使用电容类型有何差异</h1><h2 id="实事引入"><a href="#实事引入" class="headerlink" title="实事引入"></a>实事引入</h2><p>在2025年的5月7号印巴冲突中巴基斯坦使用国产歼-10c，搭载国产的PL-15E,击落印度使用的阵风战斗机。5月10号在印度境内捡到PL-15E的残骸<img src="/./%E7%94%B5%E5%AE%B9/%E6%AD%BC10c.jpg" alt="歼-10C"><br><img src="/./%E7%94%B5%E5%AE%B9/PL-15E%E6%AE%8B%E9%AA%B8.jpg" alt="PL-15E残骸"></p><p>在PL-15E残骸中看到株洲宏达，经查询该公司<br>主营产品：包括钽电容器、磁珠、变压器、电阻、微波器件组件、电源模块、I/F转换器等。</p><p>应用领域：覆盖航空、航天、船舶、地面装备、指挥系统、通信系统等<strong>军工领域</strong>，并逐步拓展至智能手机、工业控制、医疗设备、汽车电子等民用市场。这家单位是有军民融合产业基金投资的，相当于官方认证军工资质。</p><p>想必在PL-15E中定有使用到该公司的产品（从图上看该残骸应该是一个dcdc)<br>这让我结合DS写一篇电容的分类及使用场景的blog，旨在熟悉多种电容的运用</p><h3 id="电容的常见参数"><a href="#电容的常见参数" class="headerlink" title="电容的常见参数"></a>电容的常见参数</h3><p>电容的基础参数：标称容量、额定电压、容量偏差</p><p>电容的体质参数：ESR（等效串联电阻）、损耗角正切（tanδ）（能量损耗与存储能量的比值，在高频场景下损耗增大，发热明显铝电解和CBB电容，影响纹波电流承受能力等）、漏电流以及自愈特性、ESL(高频去耦电容需ESL极低)</p><h4 id="参数关联速查表（按场景选参数优先级）"><a href="#参数关联速查表（按场景选参数优先级）" class="headerlink" title="参数关联速查表（按场景选参数优先级）"></a>参数关联速查表（按场景选参数优先级）</h4><table><thead><tr><th>应用场景</th><th>关键参数</th><th>推荐电容类型</th></tr></thead><tbody><tr><td>手机CPU电源去耦</td><td>低ESR（&lt;10mΩ）、小封装、高频特性</td><td>0402/0201 MLCCX5R/X7R）</td></tr><tr><td>工业电源模块滤波</td><td>高纹波电流、耐高温、长寿命</td><td>固态铝电解/低ESR钽电容</td></tr><tr><td>电动车电机控制器</td><td>高耐压（450V+）、自愈特性</td><td>CBB薄膜电容</td></tr><tr><td>射频电路匹配</td><td>低ESL、温度稳定性（NP0/C0G）</td><td>高频陶瓷电容</td></tr><tr><td>植入式医疗设备</td><td>漏电流（nA级）、生物相容性</td><td>二氧化锰钽电容/高分子钽电容</td></tr></tbody></table><h4 id="在此对比CBB电容与安规电容"><a href="#在此对比CBB电容与安规电容" class="headerlink" title="在此对比CBB电容与安规电容"></a>在此对比CBB电容与安规电容</h4><p><img src="/./%E7%94%B5%E5%AE%B9/CBB%E4%B8%8E%E5%AE%89%E8%A7%84%E7%94%B5%E5%AE%B9%E5%AF%B9%E6%AF%94.png" alt="CBB与安规电容对比"></p><p>部分安规电容会选用CBB（聚丙烯薄膜）作为介质，但必须满足安规标准：(X是耐压等级，Y是绝缘等级)<br>案例：<br>X2安规电容：常用金属化聚丙烯薄膜（CBB材料），额定电压≤305V AC，用于跨接火线-零线。<br>Y2安规电容：可能采用聚丙烯薄膜+特殊结构，额定电压≤250V AC，用于连接火线/零线-地。</p><h4 id="选型要点"><a href="#选型要点" class="headerlink" title="选型要点"></a>选型要点</h4><ul><li><p>明确需求优先级：高可靠场景首看温度/寿命，高频电路紧盯ESR/ESL。</p></li><li><p>警惕参数陷阱：标称容量≠高频实际容量，额定电压≠安全使用电压。</p></li><li><p>活用降额设计：电压/温度/纹波电流至少保留20%余量。</p></li></ul><h3 id="电容多种分类方式、特点及使用场景"><a href="#电容多种分类方式、特点及使用场景" class="headerlink" title="电容多种分类方式、特点及使用场景"></a>电容多种分类方式、特点及使用场景</h3><h4 id="一、按介质材料分类（核心分类）"><a href="#一、按介质材料分类（核心分类）" class="headerlink" title="一、按介质材料分类（核心分类）"></a>一、按介质材料分类（核心分类）</h4><table><thead><tr><th>类型</th><th>常见子类</th><th>特点</th><th>典型应用</th></tr></thead><tbody><tr><td>陶瓷电容</td><td>多层陶瓷电容（MLCC）、单层陶瓷</td><td>高频特性好、体积小、成本低，但容量小、易受机械应力</td><td>手机射频电路、电源去耦</td></tr><tr><td>电解电容</td><td>铝电解电容、钽电解电容</td><td>容量大、有极性，但寿命有限（铝）或成本高（钽）</td><td>电源滤波、储能（铝电解）</td></tr><tr><td>精密设备（钽电解）</td><td></td><td></td><td></td></tr><tr><td>薄膜电容</td><td>聚酯（CL）、聚丙烯（CBB）</td><td>耐高压、低损耗、自愈特性，体积较大</td><td>电机驱动、交流滤波、音响设备</td></tr><tr><td>云母电容</td><td>天然云母、合成云母</td><td>耐高压、高精度、高频性能优异，价格高</td><td>高频振荡电路、医疗设备</td></tr><tr><td>纸介电容</td><td>油浸纸介、金属化纸介</td><td>成本低但易受潮，逐渐被淘汰</td><td>老式收音机、电源电路（历史用途）</td></tr><tr><td>超级电容</td><td>双电层电容、赝电容</td><td>容量极大（法拉级），充放电快，但电压低</td><td>储能系统、电动车瞬时补能</td></tr></tbody></table><h4 id="二、按极性分类"><a href="#二、按极性分类" class="headerlink" title="二、按极性分类"></a>二、按极性分类</h4><p><strong>极化电容（有极性）</strong></p><p>代表类型：铝电解电容、钽电容</p><p>特点：必须按正负极正确连接，否则可能爆炸或失效。</p><p>应用：直流电路中的电源滤波、储能。</p><p><strong>非极化电容（无极性）</strong></p><p>代表类型：陶瓷电容、薄膜电容、云母电容</p><p>特点：无正负极之分，适合交流电路。</p><p>应用：信号耦合、高频滤波、电机启动。</p><h4 id="三、按封装形式分类"><a href="#三、按封装形式分类" class="headerlink" title="三、按封装形式分类"></a>三、按封装形式分类</h4><table><thead><tr><th>类型</th><th>特点</th><th>适用场景</th></tr></thead><tbody><tr><td>直插式电容</td><td>引脚插入PCB孔焊接，体积较大</td><td>大容量铝电解电容、工业设备</td></tr><tr><td>贴片电容</td><td>表面贴装（SMD），微型化</td><td>手机、电脑等消费电子</td></tr><tr><td>轴向/径向电容</td><td>引脚从两端或同一端引出，便于安装</td><td>老式音响、电源模块</td></tr><tr><td>螺栓电容</td><td>大容量、高电压，带螺栓固定端子</td><td>工业变频器、电力系统</td></tr></tbody></table><h4 id="四、按功能用途分类"><a href="#四、按功能用途分类" class="headerlink" title="四、按功能用途分类"></a>四、按功能用途分类</h4><p><strong>滤波电容</strong></p><p>作用：平滑电源波动，滤除噪声。</p><p>选型：铝电解（低频）、陶瓷（高频）。</p><p>典型场景：电源适配器输出端、CPU供电电路。</p><p><strong>耦合电容</strong></p><p>作用：传递交流信号，隔离直流。</p><p>选型：薄膜电容、陶瓷电容（无极性）。</p><p>典型场景：音频放大器输入级、信号传输链路。</p><p><strong>去耦电容</strong></p><p>作用：消除芯片供电噪声，稳定局部电压。</p><p>选型：多层陶瓷电容（MLCC）。</p><p>典型场景：集成电路（IC）电源引脚附近。</p><p><strong>谐振电容</strong></p><p>作用：与电感配合形成LC振荡电路。</p><p>选型：云母电容、高频陶瓷电容（高精度）。</p><p>典型场景：无线电调频电路、时钟发生器。</p><p><strong>储能电容</strong></p><p>作用：短时间内释放大电流。</p><p>选型：超级电容、铝电解电容。</p><p>典型场景：相机闪光灯、电动车加速补能。</p><h4 id="五、其他特殊分类"><a href="#五、其他特殊分类" class="headerlink" title="五、其他特殊分类"></a>五、其他特殊分类</h4><p><strong>安规电容（X电容、Y电容）</strong></p><p>作用：抑制电磁干扰（EMI），确保人身安全。</p><p>特点：失效时不会引发触电或火灾。</p><p>应用：电源输入端（如X电容跨接火线/零线，Y电容连接火线/地）。</p><p><strong>可变电容</strong></p><p>原理：通过机械调节改变极板间距或面积，从而改变容量。</p><p>类型：空气可变电容、薄膜可变电容。</p><p>应用：老式收音机调谐、实验室信号发生器。</p><p><strong>温度补偿电容</strong></p><p>特点：容量随温度变化反向调整，抵消电路温漂。</p><p>典型型号：NP0/C0G陶瓷电容（温度系数接近零）。</p><p>应用：精密振荡器、传感器电路。</p><h4 id="六、选型速查表"><a href="#六、选型速查表" class="headerlink" title="六、选型速查表"></a>六、选型速查表</h4><table><thead><tr><th>需求</th><th>推荐电容类型</th><th>理由</th></tr></thead><tbody><tr><td>高频滤波（GHz）</td><td>高频陶瓷电容（NP0/C0G）</td><td>超低损耗，稳定性极佳</td></tr><tr><td>大容量储能（&gt;1000μF）</td><td>铝电解电容</td><td>成本低，容量体积比高</td></tr><tr><td>极端环境（高温/振动）</td><td>固态钽电容</td><td>耐高温、抗机械冲击</td></tr><tr><td>高压场景（&gt;1000V）</td><td>薄膜电容（CBB）</td><td>自愈特性，击穿后自动恢复</td></tr><tr><td>信号耦合（高保真）</td><td>聚丙烯薄膜电容（CBB）</td><td>低失真，频响平坦</td></tr></tbody></table><p>电容的分类维度多样，实际选型需结合容量、耐压、频率、温度、体积、成本等需求</p><h3 id="使用场景总结"><a href="#使用场景总结" class="headerlink" title="使用场景总结"></a>使用场景总结</h3><p>消费电子：贴片陶瓷电容（MLCC）是绝对主流。</p><p>工业设备：钽电容扛起可靠性大旗，薄膜电容负责功率场景。</p><p>极端环境：云母电容和特种电解电容（如钽）不可替代。</p><p>未来趋势：超级电容和柔性电容将拓展储能与可穿戴领域。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 硬件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>好用软件分享</title>
       <link href="/2025/01/01/%E5%A5%BD%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/"/>
       <url>/2025/01/01/%E5%A5%BD%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/</url>
@@ -20,7 +45,7 @@
       
         <tags>
             
-            <tag> 知识分享 </tag>
+            <tag> 分享 </tag>
             
         </tags>
       
@@ -70,7 +95,7 @@
       
         <tags>
             
-            <tag> 知识分享 </tag>
+            <tag> 分享 </tag>
             
         </tags>
       
@@ -95,7 +120,7 @@
       
         <tags>
             
-            <tag> 知识分享 </tag>
+            <tag> 分享 </tag>
             
         </tags>
       
@@ -158,7 +183,7 @@
       <link href="/2024/11/21/CW%E7%A4%BE%E5%8C%BACC%E8%A1%A8/"/>
       <url>/2024/11/21/CW%E7%A4%BE%E5%8C%BACC%E8%A1%A8/</url>
       
-        <content type="html"><![CDATA[<p>aa’a</p><h3 id="cw32CC表简介"><a href="#cw32CC表简介" class="headerlink" title="cw32CC表简介"></a>cw32CC表简介</h3><p>一款以CW32的主控的Type-C接口电压电流功率表，实现可实时监测接口的电压电流情况<img src="/./cc%E8%A1%A8%E5%A4%96%E8%A7%82.jpg" alt="cc表外观"></p><h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>基于一块CW32L010F8U6为主控，四路ADC（ADC10~13），分别为电压检测(ADC13)，温度检测(ADC10)，以及电流检测（高端电流采样芯片INA199A1DCKR，差分放大电路，带有偏置电压。可采集双向的电流。）<a href="https://blog.csdn.net/qq_27158179/article/details/82585609">一款用于采集双向电流的差分放大电路_双向电流检测电路-CSDN博客</a><img src="/./cw32%E4%B8%BB%E6%8E%A7.png" alt="cw32主控"><br>    电源使用压差为600mv的ldo（SE8533K2-HF)<img src="/./ldo%E7%94%B5%E6%BA%90.png" alt="ldo电源"></p><table><thead><tr><th>最大输入电压</th><th>40V</th></tr></thead><tbody><tr><td>输出电压</td><td>3.3V</td></tr><tr><td>输出电流</td><td>250mA</td></tr><tr><td>工作温度</td><td>-20℃～85℃</td></tr></tbody></table><p>设计者在设计时考虑到用户可能使用大电压的电源，导致ldo效率太低（如使用20v时，效率为3.3/20v=16.5%），发热严重的思路来设计PCB板，让ldo的热量传导到pcb板来散热，同时接口处未作特殊处理，这样的话带来一个问题多的热量传导到typec接口上，接入typec接口的设备，如有保护功能的将会降功率到一个合适的功率而无法发挥设备的功率极限。实验得使用redmelk50U的120W充电器始终无法达到100w的功率，何谈120W，同时由板载ntc测得pcb温度可达56度以上，温度可能还是比较高的，但还未到工作温度极限。还是一个不错的产品，15元的价格也是还可以的，</p><p>显示方面有spi协议0.91寸LCD屏幕或自带数码管可选，可实现，电压、电流、功率、充电时间、温度，电压电流温度曲线的显示。<img src="/./%E6%98%BE%E7%A4%BA.png" alt="显示"></p><p>​PCB设计方面</p><ol><li>采样电阻使用<strong>开尔文走线layout</strong><br> <img src="/./%E5%BC%80%E5%B0%94%E6%96%87%E8%B5%B0%E7%BA%BF.png" alt="开尔文走线"></li><li>对电源，重要信号点添加测试点如：ADC,CC</li></ol><h3 id="用户方面"><a href="#用户方面" class="headerlink" title="用户方面"></a>用户方面</h3><p>​cc表到手后要自己烧录，但烧录方面官方还是要多做内容，讲的不清不楚，还是要尔等再细细探索，cw32可用usb转串口下载和DAP-link来下载。</p><h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>产品还是不错的，当手边没更好的器材时，可做简单测量，测低功耗就别用了，精度方面还是一言难尽的，或许只能简单的测一测手机的充电功耗罢了。</p><p><img src="/./%E6%8E%A5%E5%85%A5%E5%AE%9E%E5%86%B51.jpg" alt="接入实况1"></p><p><img src="/./%E6%8E%A5%E5%85%A5%E5%AE%9E%E5%86%B52.jpg" alt="接入实况"></p>]]></content>
+        <content type="html"><![CDATA[<h3 id="cw32CC表简介"><a href="#cw32CC表简介" class="headerlink" title="cw32CC表简介"></a>cw32CC表简介</h3><p>一款以CW32的主控的Type-C接口电压电流功率表，实现可实时监测接口的电压电流情况<img src="/./cc%E8%A1%A8%E5%A4%96%E8%A7%82.jpg" alt="cc表外观"></p><h3 id="功能实现"><a href="#功能实现" class="headerlink" title="功能实现"></a>功能实现</h3><p>基于一块CW32L010F8U6为主控，四路ADC（ADC10~13），分别为电压检测(ADC13)，温度检测(ADC10)，以及电流检测（高端电流采样芯片INA199A1DCKR，差分放大电路，带有偏置电压。可采集双向的电流。）<a href="https://blog.csdn.net/qq_27158179/article/details/82585609">一款用于采集双向电流的差分放大电路_双向电流检测电路-CSDN博客</a><img src="/./cw32%E4%B8%BB%E6%8E%A7.png" alt="cw32主控"><br>    电源使用压差为600mv的ldo（SE8533K2-HF)<img src="/./ldo%E7%94%B5%E6%BA%90.png" alt="ldo电源"></p><table><thead><tr><th>最大输入电压</th><th>40V</th></tr></thead><tbody><tr><td>输出电压</td><td>3.3V</td></tr><tr><td>输出电流</td><td>250mA</td></tr><tr><td>工作温度</td><td>-20℃～85℃</td></tr></tbody></table><p>设计者在设计时考虑到用户可能使用大电压的电源，导致ldo效率太低（如使用20v时，效率为3.3/20v=16.5%），发热严重的思路来设计PCB板，让ldo的热量传导到pcb板来散热，同时接口处未作特殊处理，这样的话带来一个问题多的热量传导到typec接口上，接入typec接口的设备，如有保护功能的将会降功率到一个合适的功率而无法发挥设备的功率极限。实验得使用redmelk50U的120W充电器始终无法达到100w的功率，何谈120W，同时由板载ntc测得pcb温度可达56度以上，温度可能还是比较高的，但还未到工作温度极限。还是一个不错的产品，15元的价格也是还可以的，</p><p>显示方面有spi协议0.91寸LCD屏幕或自带数码管可选，可实现，电压、电流、功率、充电时间、温度，电压电流温度曲线的显示。<img src="/./%E6%98%BE%E7%A4%BA.png" alt="显示"></p><p>​PCB设计方面</p><ol><li>采样电阻使用<strong>开尔文走线layout</strong><br> <img src="/./%E5%BC%80%E5%B0%94%E6%96%87%E8%B5%B0%E7%BA%BF.png" alt="开尔文走线"></li><li>对电源，重要信号点添加测试点如：ADC,CC</li></ol><h3 id="用户方面"><a href="#用户方面" class="headerlink" title="用户方面"></a>用户方面</h3><p>​cc表到手后要自己烧录，但烧录方面官方还是要多做内容，讲的不清不楚，还是要尔等再细细探索，cw32可用usb转串口下载和DAP-link来下载。</p><h3 id="总结："><a href="#总结：" class="headerlink" title="总结："></a>总结：</h3><p>产品还是不错的，当手边没更好的器材时，可做简单测量，测低功耗就别用了，精度方面还是一言难尽的，或许只能简单的测一测手机的充电功耗罢了。</p><p><img src="/./%E6%8E%A5%E5%85%A5%E5%AE%9E%E5%86%B51.jpg" alt="接入实况1"></p><p><img src="/./%E6%8E%A5%E5%85%A5%E5%AE%9E%E5%86%B52.jpg" alt="接入实况"></p>]]></content>
       
       
       <categories>
@@ -170,7 +195,7 @@
       
         <tags>
             
-            <tag> 知识分享 </tag>
+            <tag> 分享 </tag>
             
         </tags>
       
@@ -245,7 +270,7 @@
       
         <tags>
             
-            <tag> 知识分享 </tag>
+            <tag> 分享 </tag>
             
         </tags>
       
@@ -295,7 +320,7 @@
       
         <tags>
             
-            <tag> 知识分享 </tag>
+            <tag> 分享 </tag>
             
         </tags>
       
