@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>CE修改器加速百度网盘</title>
+      <link href="/2025/05/13/CE%E5%8A%A0%E9%80%9F%E5%BA%A6%E7%9B%98/"/>
+      <url>/2025/05/13/CE%E5%8A%A0%E9%80%9F%E5%BA%A6%E7%9B%98/</url>
+      
+        <content type="html"><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>百度网盘的资源是所有网盘里资源最多的一个网盘，许多人分享资源大多数都是在百度网盘上，可是百度网盘把速度限制得很厉害。如果在不经常使用的情况下去充会员也不值，这里就用到的 ce 破解。</p><h3 id="所需工具"><a href="#所需工具" class="headerlink" title="所需工具"></a>所需工具</h3><p>这里首先需要两个应用，分别是百度网盘旧版（7.14.1.6 或 7.24）和 cheat engine</p><h4 id="下载百度网盘旧版"><a href="#下载百度网盘旧版" class="headerlink" title="下载百度网盘旧版"></a>下载百度网盘旧版</h4><p><a href="https://issuepcdn.baidupcs.com/issue/netdisk/yunguanjia/BaiduNetdisk_7.14.1.6.exe">下载链接</a></p><p>7.14.1.6及以上版本可以修改后缀即可下载（历史版本）</p><h4 id="下载cheatengine"><a href="#下载cheatengine" class="headerlink" title="下载cheatengine"></a>下载cheatengine</h4><p><a href="https://www.cheatengine.org/">下载链接</a><br>cheatengine7.6实测可用</p><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装cheatengine（下文简称“ce”）时注意有捆绑杀毒软件记得取消</p><p>安装网盘后，首先不要登录，在百度网盘的文件夹删除 3 个东西，分别是<br>AutoUpdate (文件夹)</p><p>autoDiagnoseUpdate</p><p>kernelUpdate.exe<br>避免自动更新</p><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>管理员身份运行百度网盘然后再登录下载资源。（就是正常的百度网盘的文件下载步骤）</p><p><img src="/./ce%E5%8A%A0%E9%80%9F%E5%BA%A6%E7%9B%98/image.png" alt="打开进程选择"><br><img src="/./ce%E5%8A%A0%E9%80%9F%E5%BA%A6%E7%9B%98/image-1.png" alt="PID"><br>管理员身份打开ce接着选择其中一个进程（baidunetdiskhost.exe），然后点击 open</p><p>进程的pid用任务管理器中查找的pid是十进制（o），用计算机的程序员模式转换为16进制的pid（x）就好，在ce中查找<br><img src="/./ce%E5%8A%A0%E9%80%9F%E5%BA%A6%E7%9B%98/f4bcc835c80cad83bf6be60fa5255fc.png" alt="查找"><br><img src="/./ce%E5%8A%A0%E9%80%9F%E5%BA%A6%E7%9B%98/image-2.png" alt="参考"><br>接着点击 enable speedhack，最好不要超过 100 倍，不然容易不稳定，<br>看个人网络情况和电脑自行调节，我的选择是20倍，等待百度网盘几秒请求时间。<br>百度网盘显示并不准确，以任务管理器为准。</p><p>打开任务管理器（ESC+CTRL+shift） - 性能 - 你的网卡信息看看网速是否提高，若无就换另一个。如果速度提高的话就说明加速成功.<br><img src="/./ce%E5%8A%A0%E9%80%9F%E5%BA%A6%E7%9B%98/0d464148f8f5250efc673dbcae6c497.png" alt="用的火绒的流量监控"><br>如果两个都没有也许是资源有问题也可能是这个百度网盘和 ce 版本有问题，可以试一下在下载那改后缀换个网盘版本下载。</p><h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>1.每次使用完最好记得把速度调回去 1 倍，然后关掉 ce，关掉百度网盘</p><p>2.最好后台程序少点，有时候打开某种程序也会突然失效。</p><p>3.如果突然加速失败，或者网盘显示 下载请求中 那么就要按照注意 1 的做法去关掉 ce 和网盘，然后再重新打开即可。</p><p>4.某些小资源（100M）还有超大文件 5G 以上的可能加速没什么效果。</p><ol start="6"><li>有的盆友前面的文件可能没删，且可能用多了可能被拉黑名单啦，打百度网盘看看进程会多一个YunDetectService (32 位)，处理掉应该没问题。<br><img src="/./ce%E5%8A%A0%E9%80%9F%E5%BA%A6%E7%9B%98/e424284aaf5150562b45366e53284f5.png" alt="进程"></li></ol><p>额外：</p><p>如果 ce 破解不了，可以尝试网盘直链解析。（这玩意容易寄）</p><p>配置好，以后对于百度网盘资源只要保存到百度网盘后，就可直接使用该方法加速，具体加速到多少为极限倒不清楚，我的网络环境的只有50Mbps（5mb/s），使用时有30-50Mbps(3-5mb/s)。想要像steam一样的全速下载功能在，建议上年卡158，性价比拉满！</p><p>如果把资源存到steam的小红车不知可不可以，这样就可以享受steam的全速了，有机会可以一试！</p><p>这次主要下载cadence<br>下面是cadence各个版本吴川斌的博客的学习版度盘链接</p><p><a href="https://pan.baidu.com/s/1JmodzlA4ljLYDhDZGLg4FQ?pwd=igv0#/home/%2F/%2F">下载链接</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 软件 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 分享 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>不同使用场景使用电容类型有何差异</title>
       <link href="/2025/05/12/%E4%B8%8D%E5%90%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8%E7%94%B5%E5%AE%B9%E7%B1%BB%E5%9E%8B%E6%9C%89%E4%BD%95%E5%B7%AE%E5%BC%82/"/>
       <url>/2025/05/12/%E4%B8%8D%E5%90%8C%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF%E4%BD%BF%E7%94%A8%E7%94%B5%E5%AE%B9%E7%B1%BB%E5%9E%8B%E6%9C%89%E4%BD%95%E5%B7%AE%E5%BC%82/</url>
